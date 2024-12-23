@@ -1,0 +1,279 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Raleway", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+button:hover {
+  cursor: pointer;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background: rgb(30,30,30);
+  background-image: url(../img/jayaram.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow:hidden;
+}
+.jayaram{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.jayaram .title {
+  width: fit-content;
+  font-weight: bold;
+  letter-spacing: 1px;
+  padding: 10px;
+  margin: 20px 0;
+  margin-left: 10vw;
+  text-transform: uppercase;
+}
+
+.jayaram .title h1 {
+  color: rgb(255, 240, 142);
+  font-size: 35px;
+  letter-spacing: 3px;
+}
+
+.jayaram .title ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 15px 5px;
+}
+
+.jayaram .title ul li {
+  margin: 0 10px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  position: relative; 
+  cursor: pointer;
+  -webkit-user-select: none; /* Safari */
+  -ms-user-select: none; /* IE 10 and IE 11 */
+  user-select: none; /* Standard syntax */
+}
+
+.jayaram .title ul li a {
+  margin: 0 10px;
+  padding: 10px 15px;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.jayaram .title ul li:hover .dropdown-content {
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 5px 0 grey;
+  display: block;
+}
+
+
+.jayaram .title ul li.portfolio {
+  position: relative; 
+}
+
+.jayaram .title ul li .dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.2); 
+  backdrop-filter: blur(10px);
+  border-radius: 5px;
+  min-width: 180px;
+  max-height: 220px;
+  padding: 5px 0;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.jayaram .title ul li .dropdown-content a {
+  color: white;
+  text-decoration: none;
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 300;
+  padding: 2px 0 ;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  text-align: center;
+}
+
+.jayaram .title ul li .dropdown-content a:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.jayaram .title ul li.portfolio:hover .dropdown-content {
+  display: block;
+}
+
+.social-media {
+  display: flex;
+  flex-direction: column;
+  margin-left: 1vw;
+}
+
+.social-media a {
+  background-color: white;
+  width: 33px;
+  height: 33px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin: 3px 0;
+  border-radius: 30px;
+}
+
+.social-media a:hover {
+  background-color: rgb(232, 174, 0);
+}
+
+.social-media a img {
+  width: 20px;
+  height: 20px;
+}
+
+.quote {
+  margin-left: 3vw;
+  margin-bottom: 10px;
+}
+
+.quote p {
+  font-size: 20px;
+  font-weight: bolder;
+  color: white;
+  letter-spacing: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    background: linear-gradient(rgba(30,30,30,0.2),rgba(30,30,30,0.1)),url(../img/jayaram-mobile.jpg);
+    background-size: cover;
+  }
+  .jayaram{
+    justify-content:space-around;
+  }
+
+  .jayaram .title {
+    margin-left: 0;
+    margin: 0 auto;
+    justify-content: center;
+    align-items: center;
+    margin-top: -5vh;
+  }
+
+  .jayaram .title h1 {
+    font-size: 24px;
+    padding: 0;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+
+  .jayaram .title ul {
+    padding: 30px 0;
+  }
+
+  .jayaram .title ul li {
+    font-size: 18px;
+  }
+
+  .jayaram .title ul li a {
+    margin: 5px 0;
+    padding: 8px 12px;
+    font-size: 18px;
+  }
+
+  .quote {
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .quote p {
+    font-size: 18px;
+  }
+  .social-media{
+    padding-top:0;
+    padding-bottom:10vh;
+  }
+
+
+  .jayaram .title ul li .dropdown-content {
+    backdrop-filter: blur(10px);
+    border-radius: 5px;
+    min-width: 180px;
+    max-height: 210px;
+    padding: 5px 0;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  .jayaram .title ul li .dropdown-content a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 0;
+    font-size: 12px;
+    transition: background-color 0.3s ease;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .jayaram .title h1 {
+    font-size: 24px;
+    letter-spacing: 1px;
+    padding-bottom:0;
+  }
+
+  .jayaram .title ul li {
+    font-size: 16px;
+  }
+
+  .jayaram .title ul li a {
+    font-size: 16px;
+  }
+
+  .social-media a {
+    width: 30px;
+    height: 30px;
+  }
+
+  .quote {
+    width: 50%;
+    margin-left: 3vw;
+  }
+
+  .quote p {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}

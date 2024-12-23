@@ -1,0 +1,265 @@
+/* General styling for body */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+.upload-container{
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 100%;
+}
+/* Styling for the .form container */
+.form {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 40px;
+}
+
+/* Style for .form labels */
+.form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+/* Style for file input */
+.form input[type="file"] {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* Style for radio buttons */
+.form input[type="radio"] {
+  margin-right: 10px;
+}
+
+/* Style for category label */
+.form p {
+  margin: 15px 0 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Style for submit button */
+.form input[type="submit"] {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  width: 100%;
+}
+
+/* Submit button hover effect */
+.form input[type="submit"]:hover {
+  background-color: #45a049;
+}
+
+/* Styling for the gallery */
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+/* Styling for each image container */
+.image-container {
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 200px; /* Fixed width */
+  height: 250px; /* Fixed height */
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+  transform: translateY(-5px);
+}
+
+/* Styling for images */
+.image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Contain the image within the card */
+}
+
+/* Styling for delete button */
+.delete-button {
+  background-color: #ff4c4c;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+  transition: background-color 0.3s ease;
+}
+
+.delete-button:hover {
+  background-color: #ff0000;
+}
+
+/* Category heading */
+.category-heading {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 20px;
+  color: #333;
+  text-align: center;
+  width: 100%;
+  padding: 30px 20px;
+  text-transform: uppercase;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+.message {
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    font-size: 14px;
+}
+.message.success {
+    background-color: #d4edda;
+    color: #155724;
+}
+.message.error {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+.video-message {
+  margin-bottom: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 14px;
+}
+.video-message.success {
+  background-color: #d4edda;
+  color: #155724;
+}
+.video-message.error {
+  background-color: #f8d7da;
+  color: #721c24;
+}
+/* Responsive design */
+@media (max-width: 768px) {
+  .gallery {
+    gap: 15px;
+  }
+
+  .image-container {
+    width: 150px; /* Adjusted fixed width for smaller screens */
+    height: 200px; /* Adjusted fixed height for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .image-container {
+    width: 100%; /* Full width on very small screens */
+    height: 200px; /* Adjusted height for full width */
+  }
+}
+.progress-container {
+  width: 100%;
+  background-color: #f3f3f3;
+  border-radius: 5px;
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.progress-bar {
+  width: 0;
+  height: 20px;
+  background-color: #4caf50;
+  transition: width 0.4s ease;
+}
+
+.progress-text {
+  text-align: center;
+  font-size: 14px;
+  color: #333;
+  margin-top: 5px;
+}
+.uploaded-videos {
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+}
+
+.videos-title {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.video-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.video-heading {
+  font-size: 18px;
+  margin: 0;
+  color: #555;
+}
+
+.delete-form {
+  margin: 0;
+}
+
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 6px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.no-videos-message {
+  font-size: 16px;
+  color: #999;
+  text-align: center;
+  margin-top: 20px;
+}
